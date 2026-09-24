@@ -1,0 +1,40 @@
+name: 예약 영상 현황
+
+on:
+  schedule:
+    - cron: "30 23 * * *" # UTC 23:30 = 한국시간 08:30
+  workflow_dispatch: # 수동 실행 버튼
+
+concurrency:
+  group: scheduled-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 예약 현황 전송
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
+          OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET }}
+          YT_OAUTH_TOKENS: ${{ secrets.YT_OAUTH_TOKENS }}
+        run: python3 scheduled.py
+
+      - name: 실패 알림 (텔레그램)
+        if: failure()
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: |
+          MSG="⚠️ ${{ github.workflow }} 실행 실패
+
+          이 메시지를 클로드에게 그대로 보여주면 원인을 찾아 고쳐줍니다.
+          기록: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          curl -fsS -X POST "https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage" \
+            --data-urlencode chat_id="${TG_CHAT_ID}" \
+            --data-urlencode text="$MSG"

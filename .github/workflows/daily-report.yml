@@ -1,0 +1,50 @@
+name: 유튜브 일일 리포트
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # UTC 00:00 = 한국시간 09:00
+  workflow_dispatch: # 수동 실행 버튼
+
+permissions:
+  contents: write # state.json 커밋용
+
+concurrency:
+  group: daily-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 리포트 실행
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: python3 report.py
+
+      - name: 상태 저장 (전일 대비 계산용)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state.json
+          git diff --cached --quiet && exit 0
+          git commit -m "state: $(date -u +%Y-%m-%d) 스냅샷"
+          git pull --rebase
+          git push
+
+      - name: 실패 알림 (텔레그램)
+        if: failure()
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: |
+          MSG="⚠️ ${{ github.workflow }} 실행 실패
+
+          이 메시지를 클로드에게 그대로 보여주면 원인을 찾아 고쳐줍니다.
+          기록: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          curl -fsS -X POST "https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage" \
+            --data-urlencode chat_id="${TG_CHAT_ID}" \
+            --data-urlencode text="$MSG"

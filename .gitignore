@@ -1,0 +1,6 @@
+config.json
+oauth_tokens.json
+pages.json
+.claude/
+__pycache__/
+*.pyc
