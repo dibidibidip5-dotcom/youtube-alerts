@@ -13,6 +13,8 @@ from common import BASE, CONFIG, api_get, fmt, send_telegram
 
 STATE_FILE = BASE / "state.json"
 KST = timezone(timedelta(hours=9))
+RECENT_N = 10          # 최근 영상 몇 개까지 증감을 추적할지
+MOVERS_SHOWN = 3       # 리포트에 보여줄 "도는 영상" 개수
 
 
 def esc(s):
@@ -26,14 +28,19 @@ def delta_str(cur, prev):
     return f" ({'+' if d >= 0 else ''}{fmt(d)})"
 
 
+def short(title, n=30):
+    t = str(title or "")
+    return t if len(t) <= n else t[: n - 1] + "\u2026"
+
+
 def recent_videos(uploads_playlist_id):
-    """업로드 재생목록에서 최근 영상 3개의 (id, 제목, 게시시각)을 가져온다."""
+    """업로드 재생목록에서 최근 영상 몇 개의 (id, 제목, 게시시각)을 가져온다."""
     try:
         items = api_get(
             "playlistItems",
             part="snippet",
             playlistId=uploads_playlist_id,
-            maxResults=3,
+            maxResults=RECENT_N,
         ).get("items", [])
     except Exception:
         return []
@@ -107,16 +114,34 @@ def main():
             if pub >= cutoff:
                 vs = video_stats.get(vid, {})
                 lines.append(f"🆕 새 영상: \"{esc(title)}\" ({fmt(vs.get('viewCount', 0))}회)")
-        # 최근 영상 중 조회수 1위
-        if vids:
-            top = max(vids, key=lambda v: int(video_stats.get(v[0], {}).get("viewCount", 0)))
-            vs = video_stats.get(top[0], {})
-            lines.append(
-                f"최근 인기: \"{esc(top[1])}\" {fmt(vs.get('viewCount', 0))}회 · "
-                f"👍{fmt(vs.get('likeCount', 0))} · 💬{fmt(vs.get('commentCount', 0))}"
-            )
+        # 지금 도는 영상 — 누적이 아니라 "어제 하루 늘어난 양"으로 줄 세운다.
+        # 누적 1위는 이미 식은 영상일 때가 많아 채널의 현재 동력을 보여주지 못한다.
+        prev_videos = prev.get("videos", {})
+        movers = []
+        for vid, title, published in vids:
+            cur = int(video_stats.get(vid, {}).get("viewCount", 0))
+            before = prev_videos.get(vid)
+            if before is not None:
+                movers.append((cur - int(before), cur, title, False))
+            elif datetime.fromisoformat(published.replace("Z", "+00:00")) >= cutoff:
+                # 어제 올라온 새 영상은 누적 전체가 곧 증가분이다.
+                movers.append((cur, cur, title, True))
+            # 그 외(추적 시작 전부터 있던 영상)는 증가분을 알 수 없어 건너뛴다.
+        movers = sorted((m for m in movers if m[0] > 0), reverse=True)
+        if movers:
+            lines.append("🔥 <b>지금 도는 영상</b>")
+            for gain, cur, title, is_new in movers[:MOVERS_SHOWN]:
+                mark = " 🆕" if is_new else ""
+                lines.append(f"  +{fmt(gain)}  \"{esc(short(title))}\"{mark} (누적 {fmt(cur)})")
 
-        new_state["channels"][cid] = {"subs": subs, "views": views}
+        new_state["channels"][cid] = {
+            "subs": subs,
+            "views": views,
+            "videos": {
+                vid: int(video_stats.get(vid, {}).get("viewCount", 0))
+                for vid, _, _ in vids
+            },
+        }
 
     send_telegram("\n".join(lines))
     STATE_FILE.write_text(json.dumps(new_state, ensure_ascii=False, indent=2), encoding="utf-8")
