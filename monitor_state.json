@@ -4,24 +4,24 @@
    "subs": 9,
    "video_views": {
     "Ea20RbkMnA8": {
-     "views": 1294,
-     "ema": 457.6
+     "views": 1295,
+     "ema": 320.62
     },
     "ZMPhbMGTqBg": {
-     "views": 285,
-     "ema": 15.8
+     "views": 292,
+     "ema": 13.16
     },
     "M2L4dkKDjMI": {
-     "views": 1478,
-     "ema": 63.3
+     "views": 1516,
+     "ema": 55.71
     },
-    "ELCclGx0NqI": {
-     "views": 2270,
-     "ema": 131.7
+    "8wlR_WRhQBo": {
+     "views": 165,
+     "ema": 0
     },
-    "_koq8iwejQ4": {
-     "views": 3394,
-     "ema": 592.4
+    "CTFI7uF2ub4": {
+     "views": 789,
+     "ema": 0
     }
    },
    "report_cards": {
@@ -31,10 +31,20 @@
     },
     "ZMPhbMGTqBg": {
      "pub": "2026-09-24T03:00:04Z",
+     "done": true
+    },
+    "8wlR_WRhQBo": {
+     "pub": "2026-09-25T06:00:04Z",
+     "done": false
+    },
+    "CTFI7uF2ub4": {
+     "pub": "2026-09-25T03:00:05Z",
      "done": false
     }
    },
    "known_videos": [
+    "8wlR_WRhQBo",
+    "CTFI7uF2ub4",
     "ELCclGx0NqI",
     "Ea20RbkMnA8",
     "M2L4dkKDjMI",
@@ -49,29 +59,32 @@
     "UgyKkaJ2kxFLVryijYJ4AaABAg",
     "UgyNCZSRY6J_vBFXk8Z4AaABAg",
     "UgzjT_MJ5CL-04ifURx4AaABAg",
-    "UgzIrWrHbSUZwPf6xvV4AaABAg",
     "Ugx0hpMFxvzDqXtvavp4AaABAg",
     "Ugwkv4pztYX940zT1CR4AaABAg",
     "UgzjT_MJ5CL-04ifURx4AaABAg",
+    "UgzIrWrHbSUZwPf6xvV4AaABAg",
     "UgwJO1-j7WPww0IH4yF4AaABAg",
     "UgyNCZSRY6J_vBFXk8Z4AaABAg",
     "UgyKkaJ2kxFLVryijYJ4AaABAg"
+   ],
+   "h24_history": [
+    242
    ]
   },
   "UCJSEvOjXsVl5O_9AwxJkTpg": {
    "subs": 3,
    "video_views": {
     "d5NjRmwB4k4": {
-     "views": 194,
-     "ema": 20.7
+     "views": 217,
+     "ema": 21.39
     },
     "RN31wP3epCk": {
-     "views": 359,
-     "ema": 8.0
+     "views": 360,
+     "ema": 5.9
     },
     "PKCO64wkvsI": {
      "views": 42,
-     "ema": 1
+     "ema": 0.7
     },
     "AU1IHyf1msM": {
      "views": 649,
@@ -94,5 +107,5 @@
   }
  },
  "seeded": true,
- "updated_at": "2026-09-25T10:38:40.480474+09:00"
+ "updated_at": "2026-09-25T16:59:06.705085+09:00"
 }
