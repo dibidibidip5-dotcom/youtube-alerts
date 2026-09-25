@@ -1,9 +1,32 @@
 {
-  "updated_at": "2026-09-24T15:08:45.269821+09:00",
+  "updated_at": "2026-09-25T11:55:37.658794+09:00",
   "channels": {
     "UC2wNInNjPGbj-dSucmp9qYQ": {
-      "subs": 7,
-      "views": 3628
+      "subs": 9,
+      "views": 5479,
+      "videos": {
+        "Ea20RbkMnA8": 1294,
+        "ZMPhbMGTqBg": 285,
+        "M2L4dkKDjMI": 1478,
+        "ELCclGx0NqI": 2270,
+        "_koq8iwejQ4": 3394
+      }
+    },
+    "UCJSEvOjXsVl5O_9AwxJkTpg": {
+      "subs": 3,
+      "views": 2097,
+      "videos": {
+        "d5NjRmwB4k4": 194,
+        "RN31wP3epCk": 359,
+        "PKCO64wkvsI": 42,
+        "AU1IHyf1msM": 649,
+        "CiS4kAbBzNg": 154,
+        "5ajl3Iyj0pU": 9,
+        "TL3km2kyTGM": 85,
+        "pmBsmFsJOyU": 168,
+        "Xi-bmgA_I9Q": 150,
+        "IQ1hFEGdU1I": 61
+      }
     }
   }
 }
