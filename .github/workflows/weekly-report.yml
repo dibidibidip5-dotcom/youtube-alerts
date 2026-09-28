@@ -32,6 +32,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          [ -f competitor_state.json ] || exit 0   # 벤치마크 채널(competitors.json)이 없으면 저장할 게 없다
           git add competitor_state.json
           git diff --cached --quiet && exit 0
           git commit -m "competitor: 주간 스냅샷"
