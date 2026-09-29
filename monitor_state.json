@@ -4,24 +4,24 @@
    "subs": 13,
    "video_views": {
     "F80-AEidHhc": {
-     "views": 1231,
-     "ema": 32.16
+     "views": 1235,
+     "ema": 23.71
     },
     "ZghknzS6Crg": {
-     "views": 1295,
-     "ema": 32.51
+     "views": 1297,
+     "ema": 23.36
     },
     "_g4mCDSuttM": {
-     "views": 1267,
-     "ema": 69.32
+     "views": 1270,
+     "ema": 49.42
     },
     "jqPDwXINe78": {
-     "views": 1356,
-     "ema": 325
+     "views": 1501,
+     "ema": 271.0
     },
     "LRwnVDG68yU": {
-     "views": 789,
-     "ema": 0
+     "views": 1033,
+     "ema": 244
     }
    },
    "report_cards": {
@@ -71,14 +71,14 @@
     "UgyKkaJ2kxFLVryijYJ4AaABAg",
     "UgyNCZSRY6J_vBFXk8Z4AaABAg",
     "UgzjT_MJ5CL-04ifURx4AaABAg",
-    "UgzjT_MJ5CL-04ifURx4AaABAg",
-    "UgzIrWrHbSUZwPf6xvV4AaABAg",
-    "UgyKkaJ2kxFLVryijYJ4AaABAg",
-    "Ugx0hpMFxvzDqXtvavp4AaABAg",
+    "UgyNCZSRY6J_vBFXk8Z4AaABAg",
     "UgwJO1-j7WPww0IH4yF4AaABAg",
-    "Ugwkv4pztYX940zT1CR4AaABAg",
+    "UgzjT_MJ5CL-04ifURx4AaABAg",
     "Ugy3myeWUqChCy-bE754AaABAg",
-    "UgyNCZSRY6J_vBFXk8Z4AaABAg"
+    "Ugx0hpMFxvzDqXtvavp4AaABAg",
+    "Ugwkv4pztYX940zT1CR4AaABAg",
+    "UgyKkaJ2kxFLVryijYJ4AaABAg",
+    "UgzIrWrHbSUZwPf6xvV4AaABAg"
    ],
    "h24_history": [
     242,
@@ -96,28 +96,34 @@
    "subs": 3,
    "video_views": {
     "d5NjRmwB4k4": {
-     "views": 863,
-     "ema": 15.18
+     "views": 883,
+     "ema": 16.63
     },
     "RN31wP3epCk": {
-     "views": 375,
-     "ema": 1.22
+     "views": 376,
+     "ema": 1.15
     },
     "PKCO64wkvsI": {
      "views": 45,
-     "ema": 0.51
+     "ema": 0.36
     },
     "AU1IHyf1msM": {
-     "views": 661,
-     "ema": 0.47
+     "views": 663,
+     "ema": 0.93
     },
-    "CiS4kAbBzNg": {
-     "views": 154,
+    "3ac_g8qtIco": {
+     "views": 0,
      "ema": 0
     }
    },
-   "report_cards": {},
+   "report_cards": {
+    "3ac_g8qtIco": {
+     "pub": "2026-09-29T00:00:18Z",
+     "done": false
+    }
+   },
    "known_videos": [
+    "3ac_g8qtIco",
     "AU1IHyf1msM",
     "CiS4kAbBzNg",
     "PKCO64wkvsI",
@@ -128,5 +134,5 @@
   }
  },
  "seeded": true,
- "updated_at": "2026-09-29T02:43:57.915433+09:00"
+ "updated_at": "2026-09-29T11:36:44.753333+09:00"
 }
