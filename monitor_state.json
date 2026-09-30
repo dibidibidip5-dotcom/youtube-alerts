@@ -4,24 +4,24 @@
    "subs": 15,
    "video_views": {
     "_g4mCDSuttM": {
-     "views": 1273,
-     "ema": 25.02
+     "views": 1279,
+     "ema": 19.31
     },
     "jqPDwXINe78": {
-     "views": 1583,
-     "ema": 154.6
+     "views": 1609,
+     "ema": 116.02
     },
     "LRwnVDG68yU": {
-     "views": 1054,
-     "ema": 124.69
+     "views": 1064,
+     "ema": 90.28
     },
     "seeneiKlIzQ": {
-     "views": 976,
-     "ema": 968
+     "views": 1219,
+     "ema": 750.5
     },
     "9dNP15ryCDk": {
-     "views": 1309,
-     "ema": 350
+     "views": 1353,
+     "ema": 258.2
     }
    },
    "report_cards": {
@@ -73,14 +73,14 @@
     "UgyKkaJ2kxFLVryijYJ4AaABAg",
     "UgyNCZSRY6J_vBFXk8Z4AaABAg",
     "UgzjT_MJ5CL-04ifURx4AaABAg",
-    "UgyKkaJ2kxFLVryijYJ4AaABAg",
+    "Ugx0hpMFxvzDqXtvavp4AaABAg",
+    "UgzIrWrHbSUZwPf6xvV4AaABAg",
     "Ugwkv4pztYX940zT1CR4AaABAg",
     "UgwJO1-j7WPww0IH4yF4AaABAg",
-    "UgzIrWrHbSUZwPf6xvV4AaABAg",
     "UgzjT_MJ5CL-04ifURx4AaABAg",
     "UgyNCZSRY6J_vBFXk8Z4AaABAg",
-    "Ugy3myeWUqChCy-bE754AaABAg",
-    "Ugx0hpMFxvzDqXtvavp4AaABAg"
+    "UgyKkaJ2kxFLVryijYJ4AaABAg",
+    "Ugy3myeWUqChCy-bE754AaABAg"
    ],
    "h24_history": [
     242,
@@ -101,29 +101,29 @@
    "video_views": {
     "d5NjRmwB4k4": {
      "views": 885,
-     "ema": 8.84
+     "ema": 6.19
     },
     "RN31wP3epCk": {
-     "views": 377,
-     "ema": 0.77
+     "views": 378,
+     "ema": 0.84
     },
     "PKCO64wkvsI": {
      "views": 47,
-     "ema": 0.69
+     "ema": 0.48
     },
     "AU1IHyf1msM": {
-     "views": 663,
-     "ema": 0.45
+     "views": 664,
+     "ema": 0.61
     },
     "3ac_g8qtIco": {
      "views": 1,
-     "ema": 1
+     "ema": 0.7
     }
    },
    "report_cards": {
     "3ac_g8qtIco": {
      "pub": "2026-09-29T00:00:18Z",
-     "done": false
+     "done": true
     }
    },
    "known_videos": [
@@ -134,9 +134,12 @@
     "RN31wP3epCk",
     "d5NjRmwB4k4"
    ],
-   "seen_comments": []
+   "seen_comments": [],
+   "h24_history": [
+    1
+   ]
   }
  },
  "seeded": true,
- "updated_at": "2026-09-30T01:33:50.595491+09:00"
+ "updated_at": "2026-09-30T11:12:22.105481+09:00"
 }
