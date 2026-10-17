@@ -113,9 +113,10 @@ def main():
     need_ids = {v for vids in recent.values() for v, _, _ in vids}
     need_ids |= {c["video_id"] for cs in comments.values() for c in cs if c["video_id"]}
     video_stats, extra_titles, video_secs = {}, {}, {}
-    if need_ids:
+    ids_sorted = sorted(need_ids)
+    for i in range(0, len(ids_sorted), 50):      # videos API는 한 번에 50개까지 (10/17 51개로 400)
         vresp = api_get("videos", part="snippet,statistics,contentDetails",
-                        id=",".join(sorted(need_ids)))
+                        id=",".join(ids_sorted[i:i + 50]))
         for v in vresp.get("items", []):
             video_stats[v["id"]] = v["statistics"]
             extra_titles[v["id"]] = v["snippet"]["title"]
