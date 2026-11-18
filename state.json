@@ -1,10 +1,12 @@
 {
-  "updated_at": "2026-11-17T15:00:13.075691+09:00",
+  "updated_at": "2026-11-18T14:30:07.565680+09:00",
   "channels": {
     "UC2wNInNjPGbj-dSucmp9qYQ": {
       "subs": 60,
       "views": 0,
-      "videos": {}
+      "videos": {
+        "StXUxPF1cwo": 155
+      }
     },
     "UCJSEvOjXsVl5O_9AwxJkTpg": {
       "subs": 3,
@@ -15,7 +17,7 @@
         "d5NjRmwB4k4": 926,
         "RN31wP3epCk": 419,
         "PKCO64wkvsI": 47,
-        "AU1IHyf1msM": 677,
+        "AU1IHyf1msM": 678,
         "CiS4kAbBzNg": 155,
         "5ajl3Iyj0pU": 11,
         "TL3km2kyTGM": 89,
@@ -23,35 +25,35 @@
       }
     },
     "UCApZQ16CAbh9eYlEjgVdlKg": {
-      "subs": 874,
-      "views": 125667,
+      "subs": 875,
+      "views": 128549,
       "videos": {
-        "vytsIqprkLo": 1029,
-        "mKV_f2_5hSQ": 1894,
-        "LaxPEbDDN_Y": 46,
-        "akMSt2PdF-w": 33930,
-        "xWxMGDvZi4w": 1081,
-        "524oEX69c8k": 3293,
-        "JHHRMfSw1GQ": 1760,
-        "sjBlncefzNg": 655,
-        "hTaY5s_Tmv4": 16076,
+        "vytsIqprkLo": 1454,
+        "mKV_f2_5hSQ": 1987,
+        "LaxPEbDDN_Y": 55,
+        "akMSt2PdF-w": 34116,
+        "xWxMGDvZi4w": 1080,
+        "524oEX69c8k": 3290,
+        "JHHRMfSw1GQ": 1758,
+        "sjBlncefzNg": 700,
+        "hTaY5s_Tmv4": 16105,
         "VmJ4nChdOFw": 1925
       }
     },
     "UCiZ_mFB9LaOgC9xNxvS3SPg": {
-      "subs": 69,
-      "views": 60805,
+      "subs": 70,
+      "views": 62172,
       "videos": {
-        "5lxK26KV5lo": 742,
-        "eh_dK7Ey7VY": 624,
-        "cmwKauNG3_g": 478,
-        "c4BMi6Np0w8": 1078,
+        "ZaFpt6-71OQ": 974,
+        "5lxK26KV5lo": 1128,
+        "eh_dK7Ey7VY": 626,
+        "cmwKauNG3_g": 505,
+        "c4BMi6Np0w8": 1096,
         "viQf1ayn-ig": 1081,
-        "CBVbLKwm2fU": 1519,
-        "QezmdKtzZqQ": 310,
-        "-kGp2i4SeBs": 1207,
-        "EiLK9dZl9D0": 1060,
-        "Bw5NCjMScl8": 1222
+        "CBVbLKwm2fU": 1830,
+        "QezmdKtzZqQ": 302,
+        "-kGp2i4SeBs": 1200,
+        "EiLK9dZl9D0": 1060
       }
     }
   }
