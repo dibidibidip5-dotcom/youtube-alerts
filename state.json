@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-18T14:30:07.565680+09:00",
+  "updated_at": "2026-11-19T14:28:14.790772+09:00",
   "channels": {
     "UC2wNInNjPGbj-dSucmp9qYQ": {
-      "subs": 60,
-      "views": 0,
+      "subs": 64,
+      "views": 1118,
       "videos": {
-        "StXUxPF1cwo": 155
+        "StXUxPF1cwo": 1120
       }
     },
     "UCJSEvOjXsVl5O_9AwxJkTpg": {
       "subs": 3,
-      "views": 3123,
+      "views": 3124,
       "videos": {
         "g85eD8tm_Kw": 21,
         "3ac_g8qtIco": 48,
@@ -25,35 +25,35 @@
       }
     },
     "UCApZQ16CAbh9eYlEjgVdlKg": {
-      "subs": 875,
+      "subs": 876,
       "views": 128549,
       "videos": {
-        "vytsIqprkLo": 1454,
-        "mKV_f2_5hSQ": 1987,
-        "LaxPEbDDN_Y": 55,
-        "akMSt2PdF-w": 34116,
+        "cizfBU_x7oQ": 26,
+        "vytsIqprkLo": 1494,
+        "mKV_f2_5hSQ": 2007,
+        "LaxPEbDDN_Y": 108,
+        "akMSt2PdF-w": 34145,
         "xWxMGDvZi4w": 1080,
-        "524oEX69c8k": 3290,
-        "JHHRMfSw1GQ": 1758,
-        "sjBlncefzNg": 700,
-        "hTaY5s_Tmv4": 16105,
-        "VmJ4nChdOFw": 1925
+        "524oEX69c8k": 3286,
+        "JHHRMfSw1GQ": 1757,
+        "sjBlncefzNg": 795,
+        "hTaY5s_Tmv4": 16103
       }
     },
     "UCiZ_mFB9LaOgC9xNxvS3SPg": {
       "subs": 70,
-      "views": 62172,
+      "views": 64575,
       "videos": {
+        "lZhCiVVtMIA": 832,
+        "k0U5_61qzqs": 956,
         "ZaFpt6-71OQ": 974,
         "5lxK26KV5lo": 1128,
         "eh_dK7Ey7VY": 626,
-        "cmwKauNG3_g": 505,
-        "c4BMi6Np0w8": 1096,
-        "viQf1ayn-ig": 1081,
-        "CBVbLKwm2fU": 1830,
-        "QezmdKtzZqQ": 302,
-        "-kGp2i4SeBs": 1200,
-        "EiLK9dZl9D0": 1060
+        "cmwKauNG3_g": 508,
+        "c4BMi6Np0w8": 1101,
+        "viQf1ayn-ig": 1058,
+        "CBVbLKwm2fU": 2012,
+        "QezmdKtzZqQ": 303
       }
     }
   }
